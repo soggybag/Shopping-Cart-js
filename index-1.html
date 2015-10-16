@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>Shopping Cart</h1>
-        
+
         <div>
             <ul>
                 <li><a class="add-to-cart" href="#" data-name="Apple" data-price="1.22">Apple $1.22</a></li>
@@ -16,8 +16,8 @@
             </ul>
             <button id="clear-cart">Clear Cart</button>
         </div>
-        
-        
+
+
         <div>
             <ul id="show-cart">
                 <li>???????</li>
@@ -25,34 +25,32 @@
             <div>You have <span id="count-cart">X</span> items in your cart</div>
             <div>Total Cart:$<span id="total-cart"></span></div>
         </div>
-        
-        
-        
+
+
+
         <script src="js/shoppingCart.js"></script>
-        
+
         <script>
-            
-            // displayCart : Function
-            
-            
+
             $(".add-to-cart").click(function(event){
                 event.preventDefault();
                 var name = $(this).attr("data-name");
                 var price = Number($(this).attr("data-price"));
-                
+
                 shoppingCart.addItemToCart(name, price, 1);
                 displayCart();
             });
-            
+
             $("#clear-cart").click(function(event){
                 shoppingCart.clearCart();
                 displayCart();
             });
-            
+
             function displayCart() {
                 var cartArray = shoppingCart.listCart();
+                console.log(cartArray);
                 var output = "";
-                
+
                 for (var i in cartArray) {
                     output += "<li>"
                         +cartArray[i].name
@@ -69,85 +67,40 @@
                         +cartArray[i].name+"'>X</button>"
                         +"</li>";
                 }
-                
+
                 $("#show-cart").html(output);
                 $("#count-cart").html( shoppingCart.countCart() );
                 $("#total-cart").html( shoppingCart.totalCart() );
             }
-            
+
             $("#show-cart").on("click", ".delete-item", function(event){
                 var name = $(this).attr("data-name");
                 shoppingCart.removeItemFromCartAll(name);
                 displayCart();
             });
-            
+
             $("#show-cart").on("click", ".subtract-item", function(event){
                 var name = $(this).attr("data-name");
                 shoppingCart.removeItemFromCart(name);
                 displayCart();
             });
-            
+
             $("#show-cart").on("click", ".plus-item", function(event){
                 var name = $(this).attr("data-name");
                 shoppingCart.addItemToCart(name, 0, 1);
                 displayCart();
             });
-            
+
             $("#show-cart").on("change", ".item-count", function(event){
                 var name = $(this).attr("data-name");
-                var count = Number( $(this).val() );
+                var count = Number($(this).val());
                 shoppingCart.setCountForItem(name, count);
                 displayCart();
             });
-            
-            
+
+
             displayCart();
-            
-            
-            /*
-            var test = (function() {
-                var cart = [];
-                var obj = {};
-                
-                obj.addItem = function(name) {
-                    cart.push(name);
-                }
-                
-                obj.countCart = function() {
-                    console.log("Count Cart:"+cart.length);
-                }
-                return obj;
-            })();
-            
-            test.addItem("Foo");
-            test.addItem("Bar");
-            test.countCart();
-            console.log(test.cart);
-            */
-            
-            
-            // cart : Array
-            // Item : Object/Class
-            
-            // addItemToCart : Function
-            // removeItemFromCart : Function
-            // removeItemFromCartAll : Function
-            // clearCart : Function 
-            // countCart : Function 
-            // totalCart : Function
-            // listCart : Function
-            // saveCart : Function 
-            // loadCart : Function
-        
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
         </script>
     </body>
 </html>
