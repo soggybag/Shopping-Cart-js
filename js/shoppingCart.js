@@ -17,6 +17,9 @@ var shoppingCart = (function () {
 
     function loadCart() {
         cart = JSON.parse(localStorage.getItem("shoppingCart"));
+        if (cart === null) {
+            cart = []
+        }
     }
 
     loadCart();
