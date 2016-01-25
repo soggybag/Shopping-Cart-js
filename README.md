@@ -40,6 +40,7 @@ The shopping cart, in it's finsihed form will be able to:
 *Where to put the script tag, and why
 *Varaibles and values
 *Objects and Object Oriented Programming
+*Funcitions, Arguments, and Parameters
 *Arrays
 *For loop 
 *If statements
