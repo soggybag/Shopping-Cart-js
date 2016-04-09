@@ -60,3 +60,44 @@ The shopping cart, in it's finsihed form will be able to:
 This example is really focussed on frontend. The cart will not make purchases, or pull products off of existing e-commerce 
 web sites. You could use this is as a starting point to building something larger, but features presented here are focussed
 only on the frontend functionality of the cart. 
+
+# API 
+
+Creates a single variable shoppingCart and all methods are accessed from this. 
+
+`addItemToCart(name, price, count)` 
+
+Adds an item to the cart. If this item name already exists it increases the count that amount. 
+
+`setCountForItem(name, count)` 
+
+Sets the count for item of name in cart.
+
+`removeItemFromCart(name)`
+
+Removes 1 item of name from cart. 
+
+`removeItemFromCartAll(name)` 
+
+Removes all items of name from cart. 
+
+`clearCart()`
+
+Removes items from cart, empties the cart. 
+
+`countCart()` 
+
+returns the count of the cart. 
+
+`totalCart()`
+
+Returns the total cost of all items in the cart. 
+
+`listCart()` 
+
+Returns an array containing all items in the cart. Each item in the array contains the following properties: 
+
+* name
+* price
+* count
+* total
