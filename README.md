@@ -7,7 +7,7 @@ explains why methods and approaches were used better than starting with the fina
 
 [Shopping Car Tutorial Playlist](https://www.youtube.com/watch?v=1Q74A6ZQxdY&list=PLoN_ejT35AEhzNoPStBzAkpqAu3YQwPj7)
 
-##Goals
+## Goals
 
 The real goal of these videos and this example is to teach basic JavaScript through a practical real world, and interesting 
 example that wide range of people can relate to. Who hasn't used an online shopping cart? Here you can make your own, and 
@@ -20,7 +20,7 @@ understand the ideas here will give you a foundational understaning of JavaScrip
 Speaking of frameworks, this project does use jQuery. This is an industry standard framework, that makes many basic tasks 
 easier to accomplish. 
 
-#Features
+## Features
 
 The shopping cart covered in these vides is built with JavaScript, it also uses jQuery. 
 
@@ -35,24 +35,24 @@ The shopping cart, in it's finsihed form will be able to:
 *Display the total cost of all items in the cart
 *Save the cart to local storage, persisting the cart between browsing sessions
 
-##JavaScript Concepts covered
+## JavaScript Concepts covered
 
-*Where to put the script tag, and why
-*Varaibles and values
-*Objects and Object Oriented Programming
-*Funcitions, Arguments, and Parameters
-*Arrays
-*For loop 
-*If statements
-*Local Storage
-*JSON
-*The Module programming pattern
-*The DOM (Document Object Model)
-*jQuery
-  *Selecting elements with jQuery
-  *Using Events
-  *Handling Forms
-  *Writing to the DOM
+* Where to put the script tag, and why
+* Varaibles and values
+* Objects and Object Oriented Programming
+* Funcitions, Arguments, and Parameters
+* Arrays
+* For loop 
+* If statements
+* Local Storage
+* JSON
+* The Module programming pattern
+* The DOM (Document Object Model)
+* jQuery
+  * Selecting elements with jQuery
+  * Using Events
+  * Handling Forms
+  * Writing to the DOM
   
 
 *What the cart does not do*
@@ -61,7 +61,7 @@ This example is really focussed on frontend. The cart will not make purchases, o
 web sites. You could use this is as a starting point to building something larger, but features presented here are focussed
 only on the frontend functionality of the cart. 
 
-# API 
+## API 
 
 Creates a single variable shoppingCart and all methods are accessed from this. 
 
